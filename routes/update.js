@@ -7,6 +7,13 @@ var tableSvc = azure.createTableService('ucd', 'pEYbS1dPPSwG49rQEHYI6OLyB5yX2wFq
 /* GET users listing. */
 router.get('/', function(req, res, next) {
   res.send('respond with a resource');
+  if (!(req.cookies.signin_p && req.cookies.signin_u && req.cookies.signin_i))
+  {
+    res.render('error', {message: "You're not logged in"});
+    return;
+  }
+
+
 });
 
 
