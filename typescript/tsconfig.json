@@ -1,0 +1,10 @@
+{
+	"compilerOptions":
+	{
+		"outFile": "../public/javascripts/app.min.js"
+	},
+	"compileOnSave": true,
+	"files": [
+		"app.ts"
+	]
+}

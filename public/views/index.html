@@ -1,0 +1,18 @@
+<div class="container">
+    <div style="height:600px;">
+        <ul class="list-group">
+            <li class="list-group-item" ng-repeat="message in vm.messages track by $index"><b>{{vm.username ? vm.username : 'anonymous'}}</b> says: {{message}}</li>
+        </ul>
+    </div>   
+
+    <div style="bottom: 20px;position: absolute;width: inherit;">
+        <div class="form-group">
+            <div class="input-group">
+                <input type="text" class="form-control" ng-model="vm.userMessage" placeholder="Message" ng-keyup="$event.keyCode == 13 ? vm.sendMessage() : null">
+                <div class="input-group-addon" style="padding:0;">
+                    <button ng-click="vm.sendMessage();" class="btn btn-primary">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
